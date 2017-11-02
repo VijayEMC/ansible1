@@ -1,6 +1,6 @@
 ---
 - vsphere_guest:
-    vcenter_hostname: 10.4.44.11
+    vcenter_hostname: <ip>
     username: <user>
     password: <pass>
     guest: test-vm

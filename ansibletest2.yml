@@ -1,0 +1,22 @@
+---
+
+- name: Create a VM From a template
+  vmware_guest:
+    hostname: <ip>
+    username: <user>
+    password: <pass>
+    validate_certs: no
+    name: test-vm
+    state: poweredon
+    template: UbuntuTmpl
+    disk:
+    - size_gb: 10
+      type: thin
+      datastore: prod_ds
+    hardware:
+      memory_mb: 512
+      num_cpus: 1
+    networks:
+    - name: VM Network
+    
+    wait_for_ip_address: yes
