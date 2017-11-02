@@ -1,8 +1,8 @@
 ---
 - vsphere_guest:
     vcenter_hostname: 10.4.44.11
-    username: administrator@pac.lab
-    password: Password#1
+    username: <user>
+    password: <pass>
     guest: test-vm
     state: powered_on
     from_template: yes
