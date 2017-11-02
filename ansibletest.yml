@@ -1,0 +1,25 @@
+---
+- vsphere_guest:
+    vcenter_hostname: 10.4.44.11
+    username: administrator@pac.lab
+    password: Password#1
+    guest: test-vm
+    state: powered_on
+    from_template: yes
+    template_src: UbuntuTmpl
+    cluster: cluster
+    vm_disk:
+        disk1:
+            size_gb: 10
+            type: thin
+            datastore: prod_ds
+    vm_nic:
+        nic1:
+            network: VM Network
+            
+    vm_hardware:
+        memory_mb: 2048
+        num_cpus: 2
+    esxi:
+        datacenter: Datacenter
+        hostname: test-vm
