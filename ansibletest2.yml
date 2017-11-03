@@ -5,9 +5,9 @@
   tasks:
     - name: Create a VM From a template
       vmware_guest:
-        hostname: 10.4.44.11
-        username: administrator@pac.lab
-        password: Password#1
+        hostname: <vcenterIP>
+        username: <vcenterUser>
+        password: <vcenterPass>
         validate_certs: False
         name: test-vm
         state: poweredon

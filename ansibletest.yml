@@ -5,9 +5,9 @@
   connection: local
   tasks:
    - vsphere_guest:
-       vcenter_hostname: 10.4.44.11
-       username: administrator@pac.lab
-       password: Password#1
+       vcenter_hostname: <vcenterIP>
+       username: <vcenterUser>
+       password: <vcenterPass>
        validate_certs: False
        guest: test-vm
        from_template: yes
@@ -15,4 +15,4 @@
        cluster: cluster
        esxi:
           datacenter: Datacenter
-          hostname: 10.4.44.101
+          hostname: <host IP>
