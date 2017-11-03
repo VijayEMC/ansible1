@@ -1,14 +1,14 @@
 ---
-- hosts: webservers
+- hosts: all
   remote_user: root
   become: yes
   tasks:
     - name: Create a VM From a template
       vmware_guest:
-        hostname: <ip>
-        username: <user>
-        password: <pass>
-        validate_certs: no
+        hostname: 10.4.44.11
+        username: administrator@pac.lab
+        password: Password#1
+        validate_certs: False
         name: test-vm
         state: poweredon
         template: UbuntuTmpl
